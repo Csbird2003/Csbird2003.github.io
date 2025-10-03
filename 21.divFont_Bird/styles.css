@@ -1,0 +1,36 @@
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* no scrollbars for a clean full-screen look */
+	font-family: "Shadows Into Light", cursive;
+}
+
+.viewer {
+  position: relative;  /* important: anchors the absolute-positioned children */
+  height: 100vh;       /* full viewport height */
+  width: 100vw;        /* full viewport width */
+}
+
+/* The image: covers the entire viewer */
+.viewer img {
+  position: absolute;
+  inset: 0;            /* shorthand for top/right/bottom/left: 0 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* fill without distortion; may crop */
+}
+
+/* The caption: sits at the bottom, readable over the image */
+.viewer .description {
+  position: absolute;
+  left: 50%;                     /* center horizontally */
+  bottom: 0;                     /* stick to the bottom */
+  transform: translateX(-50%);   /* shift back half its width */
+  font-size: 2rem;
+  padding: 1rem 1.5rem;
+
+  color: #000;                   /* black text */
+  background: #81FFBE;          /* solid (opaque) background, white */
+  border: 4px solid #441507;      /* opaque teal border */
+  border-radius: 2rem;           /* rounded corners */
+}
