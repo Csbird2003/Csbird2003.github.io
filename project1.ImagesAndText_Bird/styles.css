@@ -1,0 +1,32 @@
+body {height: 100%;
+width: 100%;
+overflow: hidden; /* no scrollbars for a clean full-screen look */
+font-family: "Bangers", system-ui;
+}
+
+.viewer {position: relative; /* important: anchors the absolute-positioned children */
+height: 100vh; /* full viewport height */
+width: 100vw; /* full viewport width */
+}
+
+/* The image: covers the entire viewer */
+.viewer img {
+position: absolute;
+inset: 0; /* shorthand for top/right/bottom/left: 0 */
+width: 100%;
+height: 100%;
+object-fit: cover; /* fill without distortion; may crop */
+}
+
+/*The caption: sits at the bottom, readable over the image*/
+.viewer .discription {
+    position: absolute;
+    left: 1%;
+    bottom: 5%;
+    font-size: 2rem;
+    color: #FF1F84;
+    background-color: #E39CFF;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 0 1px;
+    box-shadow: 0px 0px 0 1px;
+}
